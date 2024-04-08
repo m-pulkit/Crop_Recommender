@@ -8,10 +8,12 @@ import streamlit as st
 import pickle
 
 # Load your machine learning model
-with open('RF_classifier.pkl', 'rb') as file:
+with open('Crop_RF_classifier.pkl', 'rb') as file:
     Crop_Mappings = pickle.load(file)
     RF_classifier = pickle.load(file)
 # Define a function to make predictions
+
+
 def predict(input_param):
     # Make predictions using the loaded model
     encoded_crop = RF_classifier.predict(input_param)
